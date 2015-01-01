@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">@style/ButtonBar</item>
+        <item name="metaButtonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/menu_frame</item>
+    </style>
+
+    <style name="ButtonBarButton" />
+    
+    <style name="terminal">
+        <item name="android:background">@drawable/textlines</item>
+	    <item name="android:paddingLeft">4dp</item>
+	    <item name="android:paddingBottom">4dp</item>
+	    <item name="android:textColor">#fff</item>
+	    <item name="android:textSize">25sp</item>
+	    <item name="android:shadowColor">#fff</item>
+	    <item name="android:shadowDx">1</item>
+	    <item name="android:shadowDy">1</item>
+	    <item name="android:shadowRadius">1</item>
+    </style>
+    
+    <style name="theme_text" >
+        <item name="android:textColor">@color/theme_text</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+        <!-- the theme applied to the application or activity -->
+    <style name="CustomActionBarTheme"
+           parent="android:Theme.NoTitleBar">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+           parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/black_overlay</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/black_overlay</item>
+    </style>
+
+</resources>

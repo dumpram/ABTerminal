@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:paddingTop="40dp"
+    tools:context="com.github.dumpram.abt.StartupActivity" >
+
+   
+   	
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+            <Button
+                android:id="@+id/left_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pair_button" />
+
+            <Button
+                android:id="@+id/center_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/connect_button" />
+
+            <Button 
+                android:id="@+id/help_button"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/help_button"
+                />
+        </LinearLayout> 
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+         
+         
+         <TextView
+             android:id="@+id/terminal_rx"
+             android:layout_width="match_parent"
+        	 android:layout_height="0dp"
+        	 android:layout_weight="1"
+        	 android:layout_marginLeft="10dp"
+        	 android:layout_marginRight="10dp"
+        	 android:layout_marginBottom="10dp"
+        	 android:layout_marginTop="30dp"
+        	 android:alpha="0.9"
+       		 android:scrollbars="vertical"
+        	 android:gravity="bottom"
+             style="@style/terminal" />
+         
+         <EditText
+             android:id="@+id/terminal_tx"
+             android:background="@drawable/textlines"
+             android:layout_marginLeft="10dp"
+        	 android:layout_marginRight="10dp"
+        	 android:paddingLeft="4dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="55dp"
+             android:inputType="text"
+             android:ems="10" />
+         
+        </LinearLayout>
+
+    </FrameLayout>
+         <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/instructions"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#33b5e5"
+            android:gravity="center"
+            android:alpha="0.1"
+            android:textSize="50sp"
+        	android:textStyle="bold" />
+
+
+</FrameLayout>
